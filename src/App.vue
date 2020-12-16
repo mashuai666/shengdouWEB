@@ -5,25 +5,11 @@
       <a href="javascript:;">
         <img src="./assets/img/LOGO.png" alt="" class="fl">
       </a>
-      <el-menu :default-active="activeIndex2" class="el-menu-demo fr" mode="horizontal" @select="handleSelect"  text-color="#000" active-text-color="#0F8799">
-      <el-menu-item index="1">
-       <router-link to='/index'>首页</router-link>
-        </el-menu-item>
-      <el-submenu index="2">
-        <template slot="title">
-          <router-link to='/productCenter'>产品中心</router-link>
-          </template>
-        <el-menu-item index="2-1">污水界面仪</el-menu-item>
-        <el-menu-item index="2-2">智能井盖</el-menu-item>
-        <el-menu-item index="2-3">气田</el-menu-item>
-      </el-submenu>
-      <el-menu-item index="3" >解决方案</el-menu-item>
-      <el-menu-item index="4">
-        <a target="_blank">经典案例</a>
-      </el-menu-item>
-      <el-menu-item index="5" >技术支持</el-menu-item>
-      <el-menu-item index="6" >公司理念</el-menu-item>
-      <el-menu-item index="7" >新闻中心</el-menu-item>
+      <el-menu router :default-active="$route.path" class="el-menu-demo fr" mode="horizontal" :select="handleSelect"  text-color="#000" active-text-color="red">
+      <el-menu-item index="/index">首页</el-menu-item>
+      <el-menu-item index="/productCenter">产品中心</el-menu-item>
+      <el-menu-item index="/technology">技术支持</el-menu-item>
+      <el-menu-item index="/idea">公司理念</el-menu-item>
       </el-menu>
     </div>
     <!-- 内容区域 -->
@@ -125,15 +111,44 @@
   </div>
 </template>
 
-<style>
+<script>
+export default {
+  data () {
+    return {
+    }
+  },
+  mounted () {
+    this.$router.afterEach((to, from, next) => {
+      window.scrollTo(0, 0)
+    })
+  }
+}
+</script>
 
+<style scoped>
+.nav{
+  height: 130px;
+  width: 1300px;
+  margin: 0 auto;
+}
+.nav img{
+    line-height: 100px;
+    height: 100px;
+    padding: 15px 0;
+    vertical-align: middle;
+    margin-left: 50px;
+}
 /* 底部通栏 */
+.bottom-comm{
+  margin-top: 30px;
+}
 .map_img{
   width: 800px;
   margin: 0 auto;
   display: block;
   margin-top: -20px;
 }
+
 .bottom-comm .bot-nav{
   height: 250px;
   width: 100%;
@@ -182,4 +197,5 @@
   position: relative;
   top: 100px;
 }
+
 </style>
