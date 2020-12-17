@@ -1,13 +1,17 @@
 <template>
   <div id="app">
+    <el-backtop class="toTop">
+      UP
+    </el-backtop>
       <!-- 导航菜单 以及 LOGO -->
     <div class="nav clearf">
       <a href="javascript:;">
         <img src="./assets/img/LOGO.png" alt="" class="fl">
       </a>
-      <el-menu router :default-active="$route.path" class="el-menu-demo fr" mode="horizontal" :select="handleSelect"  text-color="#000" active-text-color="red">
+      <el-menu router :default-active="$route.path" class="el-menu-demo fr" mode="horizontal" text-color="#000" active-text-color="#409EFF">
       <el-menu-item index="/index">首页</el-menu-item>
       <el-menu-item index="/productCenter">产品中心</el-menu-item>
+      <el-menu-item index="/experience">公司历程</el-menu-item>
       <el-menu-item index="/technology">技术支持</el-menu-item>
       <el-menu-item index="/idea">公司理念</el-menu-item>
       </el-menu>
@@ -23,89 +27,43 @@
       <div class="map main">
         <img src="./assets/img/map.png" class="map_img" alt="">
       </div>
-      <div class="bot-nav">
-        <div class="main">
-          <ul class="clearf bot-nav-ul">
-            <!-- 首页 -->
-            <li class="fl">
-              <ul>
-                <li>公司首页</li>
-                <li><a href="javascript:;">关于我们</a></li>
-                <li><a href="javascript:;">产品中心</a></li>
-                <li><a href="javascript:;">团队成员</a></li>
-                <li><a href="javascript:;">合作企业</a></li>
-              </ul>
-            </li>
-            <div class="lline"></div>
-            <!-- 产品中心 -->
-            <li class="fl">
-              <ul>
-                <li>产品中心</li>
-                <li>产品中心</li>
-                <li>团队成员</li>
-                <li>合作企业</li>
-              </ul>
-            </li>
-            <div class="lline"></div>
-            <!-- 解决方案 -->
-             <li class="fl">
-              <ul>
-                <li>关于我们</li>
-                <li>产品中心</li>
-                <li>团队成员</li>
-                <li>合作企业</li>
-              </ul>
-            </li>
-            <div class="lline"></div>
-            <!-- 经典案例 -->
-             <li class="fl">
-              <ul>
-                <li>关于我们</li>
-                <li>产品中心</li>
-                <li>团队成员</li>
-                <li>合作企业</li>
-              </ul>
-            </li>
-            <div class="lline"></div>
-            <!-- 技术支持 -->
-             <li class="fl">
-              <ul>
-                <li>关于我们</li>
-                <li>产品中心</li>
-                <li>团队成员</li>
-                <li>合作企业</li>
-              </ul>
-            </li>
-            <div class="lline"></div>
-            <!-- 公司理念 -->
-             <li class="fl">
-              <ul>
-                <li>关于我们</li>
-                <li>产品中心</li>
-                <li>团队成员</li>
-                <li>合作企业</li>
-              </ul>
-            </li>
-            <div class="lline"></div>
-            <!-- 新闻中心 -->
-             <li class="fl">
-              <ul>
-                <li>关于我们</li>
-                <li>产品中心</li>
-                <li>团队成员</li>
-                <li>合作企业</li>
-              </ul>
-            </li>
-            <div class="bot-nav-contact fr">
-              <div class="phone">177******** 177********</div>
-              <div class="address">西安市雁塔区瑞鑫·摩天城四号楼二单元80401</div>
-              <div class="e-mail">*************@***.com</div>
-              <div class="ercode">
-                <img src="./assets/img/aboutUs1.jpg" alt="" style="width:100px;height:100px">
-              </div>
-            </div>
-          </ul>
+      <div class="bottom-comm-all">
+        <div class="main bottom-comm-main">
+        <div class="bottom-left">
+          <h3>Our contact way</h3>
+          <h4>我们的联系方式</h4>
+          <p>联系QQ：***********</p>
+          <p>联系邮箱：*****@***.com</p>
+          <p>联系电话：******* ******</p>
+          <p>联系地址：西安市碑林区太白立交西北角瑞鑫摩天城2栋4单元8层</p>
+          <div class="ercode">
+            <img src="./assets/img/ercodea.png" alt="">
+            <img src="./assets/img/ercodea.png" alt="">
+          </div>
         </div>
+        <div class="bottom-right">
+          <h3>Feedback to us</h3>
+          <h4>对我们的反馈</h4>
+          <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+            <el-form-item label="您的姓名" prop="name">
+              <el-input v-model="ruleForm.name"></el-input>
+            </el-form-item>
+            <el-form-item label="您的电话" prop="phone">
+              <el-input v-model="ruleForm.phone"></el-input>
+            </el-form-item>
+            <el-form-item label="您的意见" prop="desc">
+              <el-input type="textarea" v-model="ruleForm.desc"></el-input>
+            </el-form-item>
+            <el-form-item>
+              <el-button type="primary" @click="submitForm('ruleForm')">提交意见</el-button>
+              <el-button @click="resetForm('ruleForm')">重置</el-button>
+            </el-form-item>
+          </el-form>
+        </div>
+        </div>
+      </div>
+      <div class="copyright">
+        Copyright © 2020 2020西安圣豆电子信息技术有限公司
       </div>
     </div>
   </div>
@@ -115,6 +73,39 @@
 export default {
   data () {
     return {
+      ruleForm: {
+        name: '',
+        phone: '',
+        desc: ''
+      },
+      rules: {
+        name: [
+          { required: true, message: '姓名是必填项', trigger: 'blur' },
+          { min: 2, max: 5, message: '请填写正确的姓名', trigger: 'blur' }
+        ],
+        phone: [
+          { required: true, message: '联系电话是必填项', trigger: 'blur' },
+          { min: 11, max: 11, message: '请填写正确的电话', trigger: 'blur' }
+        ],
+        desc: [
+          { required: true, message: '请填写您的意见', trigger: 'blur' }
+        ]
+      }
+    }
+  },
+  methods: {
+    submitForm (formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          alert('您的反馈提交成功，我们会及时阅读并处理')
+        } else {
+          console.log('提交出错了!!')
+          return false
+        }
+      })
+    },
+    resetForm (formName) {
+      this.$refs[formName].resetFields()
     }
   },
   mounted () {
@@ -127,16 +118,19 @@ export default {
 
 <style scoped>
 .nav{
-  height: 130px;
-  width: 1300px;
+  height: 100px;
+  width: 1200px;
   margin: 0 auto;
 }
 .nav img{
-    line-height: 100px;
-    height: 100px;
-    padding: 15px 0;
+    height: 96px;
+    padding: 2px;
     vertical-align: middle;
     margin-left: 50px;
+}
+.el-menu.el-menu--horizontal{
+  border-bottom: 0;
+  margin-top: 15px;
 }
 /* 底部通栏 */
 .bottom-comm{
@@ -148,54 +142,42 @@ export default {
   display: block;
   margin-top: -20px;
 }
-
-.bottom-comm .bot-nav{
-  height: 250px;
+.bottom-comm-all{
   width: 100%;
-  background-color: #4B545D;
-  margin-top: -50px;
-  overflow: hidden;
-  /* background-image: url('../assets/img/bottom_bg.png'); */
-  /* background-size: cover; */
-}
-.bot-nav-ul{
-  margin-top: 80px;
-}
-.bot-nav-ul,.bot-nav-ul a{
-  font-size: 12px;
   color: #fff;
+  background-color: #409EFF;
+  background: url('./assets/img/bottom_bgt.jpg');
+  background-size: 100% 100%;
+  padding-top: 20px;
+  margin-top: -20px;
 }
-.bot-nav-ul a{
-  margin-top: 10px;
-  display: block;
+.bottom-comm-main{
+  display: flex;
+  justify-content: space-around;
 }
-.lline{
-  width: 2px;
-  height: 80px;
-  background-color: #8CAABE;
-  float: left;
-  margin: 0 20px;
+.bottom-left h3, .bottom-right h3{
+  padding-bottom: 0;
+  margin-bottom: 0;
+  color: #19B2B0;
 }
-.phone,.address,.e-mail{
-  width: 300px;
-  height: 40px;
-  line-height: 40px;
-  text-align: left;
-  padding-left: 50px;
-  background-position-y: center !important;
-}
-.phone{
-  background: url('./assets/img/bot_icon1.png') no-repeat;
-}
-.address{
-  background: url('./assets/img/bot_icon2.png') no-repeat;
-}
-.e-mail{
-  background: url('./assets/img/bot_icon3.png') no-repeat;
+.bottom-left h4, .bottom-right h4{
+  margin-top: 0;
+  padding-top: 0;
 }
 .ercode{
-  position: relative;
-  top: 100px;
+  display: flex;
+  justify-content: space-around;
 }
-
+.ercode img{
+  width: 100px;
+}
+.copyright{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #2B2F30;
+  text-align: center;
+  color: #ccc;
+  font-size: 12px;
+}
 </style>

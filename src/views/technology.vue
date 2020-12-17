@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="../assets/img/bannerA.jpg" alt="" class="product-center-bgimg">
+    <img src="../assets/img/swiper4.png" alt="" class="product-center-bgimg">
      <!-- 产品服务 -->
     <div class="section-title">
         <div>Technical Support</div>

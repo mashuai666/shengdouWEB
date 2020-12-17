@@ -1,6 +1,6 @@
 <template>
   <div>
-      <img src="../assets/img/bannerA.jpg" alt="" class="product-center-bgimg">
+      <img src="../assets/img/swiper1.png" alt="" class="product-center-bgimg">
        <!-- 公司理念 -->
     <div class="section-title">
         <div>Corporate philosophy</div>

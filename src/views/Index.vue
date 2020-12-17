@@ -2,9 +2,9 @@
   <div>
     <!-- banner -->
     <div class="block">
-      <el-carousel height="600px">
+      <el-carousel height="500px">
         <el-carousel-item v-for="item in banner" :key="item.id">
-          <img :src="item.src" alt="" class="banner">
+          <img v-lazy="item.src" alt="" class="banner">
           <!-- <img src="../assets/img/bannerA.jpg" alt=""> -->
         </el-carousel-item>
       </el-carousel>
@@ -21,11 +21,12 @@
         </div>
         <div class="about-us-content fr">
             <h2>西安圣豆电子信息技术有限公司</h2>
-            <p>公司成立于2015年，在公司发展壮大的5年里，我们始终为客户提供好的产品和技术支持、 健全的售后服务。</p>
-            <p>我们是一家专业从事物联网软硬件产品研发、生产和销售于一体的科技 类公司。自2014年4月创建以来，公司秉承“以产品成就客户、以 质量满意客户、以服务帮助客户”的理念，凭借雄厚的技术实力和资源优势，致力于智能化粮库系统、数字煤场系统及远程物联监测系统等多个领域。公司目前已拥有从研发、销售到服务的完整体系。</p>
-            <p>近年来，天通物联与清华大学、西安交通大学、西安电子科技大学、西北工业大 学等国内高校进行了广泛的合作，在电子测控和智能化管理平台方面都取得了显著的成果，公司凭借精英型的技术和商务团队，不断汲取和探索远程物联网行业的最新发展 动向，融入到新产品的开发中，并拥有多项自主知识产权。
-我们所希望的智能不再只是一条符号串，一段代码或者指令；而是一个“触手可及”的世界。它的出现可以 使我们的世界实现无缝的链接，让我们时刻感知世界，穿梭未来。它开始的创新智慧生活，是未来的工作体验和生活空间，从这里开始，抛开繁琐，让我们去体验生活 和工作的简单从容。未来已至，触手可及。这正是我们所需要的！</p>
-        </div>
+            <p>公司成立于2015年7月，在公司发展壮大的5年里，我们始终为客户提供好的产品和技术支持、 健全的售后服务。</p>
+            <p>主要产品有智能井盖控制器、智能井盖锁、空气环境监测仪、液位监测仪、气田甲醇加注控制系统、污泥界面仪；营业额平均每年递增100%。</p>
+            <p>我们的团队由博士、硕士、学士组成，具备多年跨国上市公司的研发、测试、生产管理经验。</p>
+            <p>我们提供工业物联网解决方案及相关产品，包括软件、硬件、传感器的设计开发。已经获得发明专利1项，实用新型专利7项，软件著作权证书3项。</p>
+            <p>圣豆愿携手合作伙伴并进，开启物联黄金时代。</p>
+       </div>
     </div>
     <!-- 产品中心 -->
     <div class="section-title">
@@ -34,8 +35,8 @@
     </div>
       <div class="product-service main">
       <el-carousel :interval="4000" type="card" height="500px" indicator-position="none">
-        <el-carousel-item v-for="item in product" :key="item" class="cardItem" >
-          <img :src="item.src" alt="">
+        <el-carousel-item v-for="item in product" :key="item.id" class="cardItem" >
+          <img v-lazy="item.src" alt="">
           <h3>{{ item.name }}</h3>
           <div class="product-detail" style="white-space: pre-wrap;">
           {{ item.detail }}
@@ -123,72 +124,42 @@ export default {
   data () {
     return {
       banner: [{
-        src: require('../assets/img/bannerA.jpg'),
+        src: require('../assets/img/swiper1.png'),
         describe: '第一张',
         id: 1
       }, {
-        src: require('../assets/img/bannerA.jpg'),
+        src: require('../assets/img/swiper2.png'),
         describe: '第二张',
         id: 2
       }, {
-        src: require('../assets/img/bannerA.jpg'),
+        src: require('../assets/img/swiper3.png'),
         describe: '第三张',
         id: 3
       }, {
-        src: require('../assets/img/bannerA.jpg'),
+        src: require('../assets/img/swiper4.png'),
         describe: '第四张',
         id: 4
       }],
       product: [{
         name: 'SD1901 不锈钢无钥匙远程开锁智能井盖',
         detail: '根据城市通信人井（不局限于通信人井）分布特点，通过NB-IoT组网快速实现城市井盖智能实时云监测物联网系统。终端实时采集井盖工作状态数据，对非法开启、异动等异常状态及时报警。手机APP/云平台可实时报告井盖状态，施工导航，无钥匙远程开锁，自动上锁，非法开启报警等功能。',
-        src: require('../assets/img/bannerA.jpg'),
+        src: require('../assets/img/a_product.png'),
         id: 1
-      }, {
-        name: 'SD2001-A 井盖智能监控终端（翻倾/移位）',
-        detail: '监测井盖翻倾、移位',
-        src: require('../assets/productImg/products1.png'),
-        id: 2
-      }, {
-        name: 'SD2001-B 井盖智能监控终端（翻倾/水位/气体）',
-        detail: '监测井盖翻倾、水位超限、甲烷气体',
-        src: require('../assets/img/bannerA.jpg'),
-        id: 3
       }, {
         name: 'SD2001-C 无线智能垃圾桶监测终端',
         detail: '智慧垃圾桶解决方案城市垃圾桶物联网开箱满桶报警物联网解决方案，监测是否扣盖，垃圾高度。',
-        src: require('../assets/img/bannerA.jpg'),
-        id: 4
-      }, {
-        name: 'SD2001-D 市政用无线智能温湿度监测终端',
-        detail: '智慧城市道路区域温湿度传感器，预警道路结冰、道路周边空气质量、道路照明监测',
-        src: require('../assets/img/bannerA.jpg'),
-        id: 5
+        src: require('../assets/img/b_product.png'),
+        id: 2
       }, {
         name: 'SD1801 无线智能物联网液位仪',
         detail: '本系统将基于我公司SD1600污泥监测系统来研制，目前为汉中污水厂专门定制研发,测量距离0.3~5米。',
-        src: require('../assets/img/bannerA.jpg'),
-        id: 6
-      }, {
-        name: 'SD1902 无线智能空气噪声环境监测仪',
-        detail: '可用于环境监测，温度、湿度、噪声、风速、风向、PM2.5等',
-        src: require('../assets/img/bannerA.jpg'),
-        id: 7
-      }, {
-        name: 'SD20TSM-01H(BLE&LoRa) 无线智能消防栓监测终端',
-        detail: '无线智能消防栓监测终端是一款具有无线通讯功能的高精度智能仪表，利用各种智能传感器和低功耗物联网通讯技术，将消防栓的状态信息、水压、报警等数据通过无线网络实时发送给监控中心，监控中心对数据进行存储、分析、查询、报警处理等功能，帮助用户实现对消防栓及时高效的监管。',
-        src: require('../assets/img/bannerA.jpg'),
-        id: 8
-      }, {
-        name: 'SD1800 无线智能物联网污泥界面仪',
-        detail: '中控可视化和语音报警系统，采用水下结构+嵌入式数据采集通信系统+光学传感器+机械自动清洁装置',
-        src: require('../assets/img/bannerA.jpg'),
-        id: 9
+        src: require('../assets/img/c_product.png'),
+        id: 3
       }, {
         name: 'SD1903 气田远程甲醇加注控制系统',
         detail: '该系统能够有效节约30%左右的甲醇的生产消耗；以上气田计算，一年节约1.2亿元的生产消耗',
-        src: require('../assets/img/bannerA.jpg'),
-        id: 10
+        src: require('../assets/img/d_product.png'),
+        id: 4
       }]
     }
   },
@@ -206,7 +177,7 @@ export default {
     width: 100%;
     display: table-cell;
     vertical-align: middle;
-    height: 650px;
+    height: 100%;
 }
 /* banner的一些样式 */
 .el-carousel__button{
@@ -231,6 +202,9 @@ export default {
 .el-menu.el-menu--horizontal{
     margin-top: 30px;
     margin-left: 30px;
+}
+.about-us{
+  height: 450px;
 }
 .about-us-img{
     position: relative;

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="../assets/img/bannerA.jpg" alt="" class="product-center-bgimg">
+    <img src="../assets/img/swiper3.png" alt="" class="product-center-bgimg">
      <!-- 产品服务 -->
     <div class="section-title">
         <div>Product Service</div>
@@ -151,7 +151,7 @@
            SD20TSM-01H(BLE&LORA) 无线智能消防栓监测终端
           </h3>
             <div>无线智能消防栓监测终端是一款锂亚电池供电、具有无线通讯功能的高精度智能仪表，利用各种智能传感器和低功耗物联网通讯技术，实现对消防栓的倾斜、碰撞、水压、高低压报警等情况进行监控，将消防栓的状态信息、水压、报警等数据通过无线网络实时发送给监控中心，监控中心对数据进行存储、分析、查询、报警处理等功能，并及时安排巡查人员进行现场取证、制止、恢复，帮助用户实现对消防栓及时高效的监管。</div>
-          <img src="../assets/productImg/SD20TSM-01H.png" alt="">
+          <img src="../assets/productImg/SD20TSM-01H.png" style="width:100%" alt="">
           <div>
             <div>支持本地蓝牙及远程设置设备参数；（本地蓝牙设置详见蓝牙设置手册，远程设置详见平台指导手册或咨询相关销售人员）</div>
             <div>支持本地蓝牙固件升级</div>
