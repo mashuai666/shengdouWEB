@@ -14,7 +14,7 @@
         <div>ABOUT US</div>
         <div>关于我们</div>
     </div>
-    <div class="about-us main clearf">
+    <div class="about-us main clearf right_l_scroll" id="aaa">
         <div class="about-us-img fl">
             <img src="../assets/img/aboutUs1.jpg" alt="" class="about-us-img-1">
             <img src="../assets/img/aboutUs2.jpg" alt="" class="about-us-img-2">
@@ -29,11 +29,11 @@
        </div>
     </div>
     <!-- 产品中心 -->
-    <div class="section-title">
+    <div class="section-title ">
         <div>Product Center</div>
         <div>产品中心</div>
     </div>
-      <div class="product-service main">
+      <div class="product-service main right_l_scroll">
       <el-carousel :interval="4000" type="card" height="500px" indicator-position="none">
         <el-carousel-item v-for="item in product" :key="item.id" class="cardItem" >
           <img v-lazy="item.src" alt="">
@@ -46,11 +46,11 @@
        <el-button class="moreDetail" type="primary" @click="toproduct">查看更多</el-button>
    </div>
     <!-- 团队成员 -->
-    <div class="section-title">
+    <div class="section-title ">
         <div>Team Members</div>
         <div>团队成员</div>
     </div>
-    <div class="team-members main">
+    <div class="team-members main right_l_scroll">
         <div class="team-members-list">
             <el-card :body-style="{ padding: '0px' }">
               <img src="../assets/img/LF.png" class="image team-members-img">
@@ -105,11 +105,11 @@
         </div>
     </div>
     <!-- 合作企业 -->
-    <div class="section-title">
+    <div class="section-title ">
         <div>Cooperative Enterprise</div>
         <div>合作企业</div>
     </div>
-    <div class="cooperative-enterprise main">
+    <div class="cooperative-enterprise main right_l_scroll">
       <img src="../assets/img/company3.png" alt="">
       <img src="../assets/img/company1.png" alt="">
       <img src="../assets/img/company4.png" alt="">
@@ -163,10 +163,11 @@ export default {
       }]
     }
   },
+  mounted () {
+  },
   methods: {
     toproduct () {
       this.$router.push({ path: '/productCenter' })
-      console.log('11')
     }
   }
 }
@@ -204,7 +205,7 @@ export default {
     margin-left: 30px;
 }
 .about-us{
-  height: 450px;
+    height: 450px;
 }
 .about-us-img{
     position: relative;

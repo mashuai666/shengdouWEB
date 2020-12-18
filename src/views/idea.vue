@@ -6,8 +6,8 @@
         <div>Corporate philosophy</div>
         <div>公司理念</div>
     </div>
-    <img src="../assets/img/idea1.png" alt="">
-    <img src="../assets/img/idea2.png" alt="" style="marginTop:50px">
+    <img src="../assets/img/idea1.png" alt="" class="right_l_scroll">
+    <img src="../assets/img/idea2.png" alt="" style="marginTop:50px" class="right_l_scroll">
   </div>
 </template>
 

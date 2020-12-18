@@ -8,10 +8,10 @@
     </div>
     <div class="technical-support main">
         <div class="jk">软件技术</div>
-        <img src="../assets/img/ruanjianjs.png" alt="">
+        <img src="../assets/img/ruanjianjs.png" alt="" class="right_l_scroll">
         <div class="line"></div>
         <div class="jk">硬件技术</div>
-        <img src="../assets/img/yingjianjs.png" alt="">
+        <img src="../assets/img/yingjianjs.png" alt="" class="right_l_scroll">
     </div>
   </div>
 </template>

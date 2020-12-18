@@ -6,7 +6,7 @@
         <div>Product Service</div>
         <div>产品服务</div>
     </div>
-    <div class="product-service main">
+    <div class="product-service main right_l_scroll">
       <el-tabs tab-position="left" class="eltabs">
         <el-tab-pane label="不锈钢无钥匙远程开锁智能井盖" class="el-tab-pane1">
           <h3>

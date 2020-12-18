@@ -21,10 +21,10 @@
 
     <!-- 底部通用 -->
     <div class="bottom-comm">
-      <div class="map_bg main">
+      <div class="map_bg main right_l_scroll">
         <img src="./assets/img/map_bg.png" class="main" alt="">
       </div>
-      <div class="map main">
+      <div class="map main right_l_scroll">
         <img src="./assets/img/map.png" class="map_img" alt="">
       </div>
       <div class="bottom-comm-all">
@@ -70,6 +70,7 @@
 </template>
 
 <script>
+require('./assets/js/scrollAnimation.js')
 export default {
   data () {
     return {

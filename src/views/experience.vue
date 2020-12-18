@@ -6,7 +6,7 @@
         <div>Company History</div>
         <div>公司历程</div>
     </div>
-    <div class="company_history main">
+    <div class="company_history main right_l_scroll">
       <el-card shadow="hover" class="elcard">
         <div class="company_history_list clearf">
           <div class="company_history_img fl">
@@ -79,7 +79,7 @@
         <div>Patent Certificate</div>
         <div>专利证书</div>
     </div>
-    <div class="patent-certificate main">
+    <div class="patent-certificate main right_l_scroll">
       <el-carousel trigger="click" height="350px" :interval="2000" indicator-position="none">
       <el-carousel-item v-for="item in patent" :key="item.id">
         <div class="patent-certificate-list">
