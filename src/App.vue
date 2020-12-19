@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <el-backtop class="toTop">
+    <el-backtop class="toTop"  v-show="!(path === '/error')">
       UP
     </el-backtop>
       <!-- 导航菜单 以及 LOGO -->
-    <div class="nav clearf">
-      <a href="javascript:;">
+    <div class="nav clearf" v-show="!(path === '/error')">
+      <a href="/index">
         <img src="./assets/img/LOGO.png" alt="" class="fl">
       </a>
       <el-menu router :default-active="$route.path" class="el-menu-demo fr" mode="horizontal" text-color="#000" active-text-color="#409EFF">
@@ -20,7 +20,7 @@
     <router-view></router-view>
 
     <!-- 底部通用 -->
-    <div class="bottom-comm">
+    <div class="bottom-comm"  v-show="!(path === '/error')">
       <div class="map_bg main right_l_scroll">
         <img src="./assets/img/map_bg.png" class="main" alt="">
       </div>
@@ -66,6 +66,7 @@
         Copyright © 2020 2020西安圣豆电子信息技术有限公司
       </div>
     </div>
+    <a class="qqTouch" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1251618937&site=qq&menu=yes"  v-show="!(path === '/error')"><img border="0" src="http://wpa.qq.com/pa?p=2:1251618937:53" alt="点击使用QQ与我交谈~" title="点击使用QQ与我交谈~"/></a>
   </div>
 </template>
 
@@ -74,6 +75,7 @@ require('./assets/js/scrollAnimation.js')
 export default {
   data () {
     return {
+      path: '',
       ruleForm: {
         name: '',
         phone: '',
@@ -113,11 +115,22 @@ export default {
     this.$router.afterEach((to, from, next) => {
       window.scrollTo(0, 0)
     })
+    this.path = this.$route.path
+    console.log(this.$route.path)
+  },
+  watch: {
+    $route (to, from) {
+      this.path = to.path
+    }
   }
 }
 </script>
 
 <style scoped>
+#app{
+  width: 100%;
+  height: 100%;
+}
 .nav{
   height: 100px;
   width: 1200px;
@@ -180,5 +193,26 @@ export default {
   text-align: center;
   color: #ccc;
   font-size: 12px;
+}
+.qqTouch{
+  position:fixed;
+  bottom:100px;
+  left: 10px;
+  z-index: 5;
+}
+.qqTouch:hover{
+  /* animation: tb 1s ease  infinite alternate; */
+  animation:tb 1.5s linear infinite;
+}
+@keyframes tb{
+  0%,100%,54%{
+    transform: translateY(0);
+  }
+  18%,36%{
+    transform: translateY(-4px);
+  }
+  27%{
+    transform: translateY(-1px);
+  }
 }
 </style>
