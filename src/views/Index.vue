@@ -116,6 +116,14 @@
       <img src="../assets/img/company2.jpg" alt="">
       <img src="../assets/img/company5.jpg" alt="">
     </div>
+    <!-- 公司位置 -->
+    <div class="section-title ">
+        <div>Company Location</div>
+        <div>公司位置</div>
+    </div>
+    <div class="map main right_l_scroll">
+        <img src="../assets/img/map.png" class="map_img" alt="">
+    </div>
   </div>
 </template>
 
@@ -297,5 +305,12 @@ export default {
 .cooperative-enterprise img{
   height: 50px;
   margin:0 0px 0 10px;
+}
+/* 公司位置 */
+.map_img{
+  width: 800px;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 10px 10px 5px #888888;
 }
 </style>

@@ -21,12 +21,6 @@
 
     <!-- 底部通用 -->
     <div class="bottom-comm"  v-show="!(path === '/error')">
-      <div class="map_bg main right_l_scroll">
-        <img src="./assets/img/map_bg.png" class="main" alt="">
-      </div>
-      <div class="map main right_l_scroll">
-        <img src="./assets/img/map.png" class="map_img" alt="">
-      </div>
       <div class="bottom-comm-all">
         <div class="main bottom-comm-main">
         <div class="bottom-left">
@@ -148,14 +142,9 @@ export default {
 }
 /* 底部通栏 */
 .bottom-comm{
-  margin-top: 30px;
+  margin-top: 80px;
 }
-.map_img{
-  width: 800px;
-  margin: 0 auto;
-  display: block;
-  margin-top: -20px;
-}
+
 .bottom-comm-all{
   width: 100%;
   color: #fff;
