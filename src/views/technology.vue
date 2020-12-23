@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="../assets/img/swiper4.png" alt="" class="product-center-bgimg">
+    <topImg :src='require("../assets/img/swiper6.png")'></topImg>
      <!-- 产品服务 -->
     <div class="section-title">
         <div>Technical Support</div>
@@ -17,15 +17,15 @@
 </template>
 
 <script>
+import topImg from '@/components/topImg.vue'
 export default {
-
+  components: {
+    topImg
+  }
 }
 </script>
 
 <style scoped>
-.product-center-bgimg{
-    width: 100%;
-}
 .technical-support img{
     display: block;
     margin:0 auto;

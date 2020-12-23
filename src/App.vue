@@ -11,6 +11,10 @@
       <el-menu router :default-active="$route.path" class="el-menu-demo fr" mode="horizontal" text-color="#000" active-text-color="#409EFF">
       <el-menu-item index="/index">首页</el-menu-item>
       <el-menu-item index="/productCenter">产品中心</el-menu-item>
+      <el-menu-item index="/pipe">智慧管网</el-menu-item>
+      <el-menu-item index="/water">智慧水务</el-menu-item>
+      <el-menu-item index="/gas">智慧气田</el-menu-item>
+      <el-menu-item index="/firecontrol">智慧消防</el-menu-item>
       <el-menu-item index="/experience">公司历程</el-menu-item>
       <el-menu-item index="/technology">技术支持</el-menu-item>
       <el-menu-item index="/idea">公司理念</el-menu-item>

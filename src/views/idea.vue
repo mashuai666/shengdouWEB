@@ -1,6 +1,6 @@
 <template>
   <div>
-      <img src="../assets/img/swiper1.png" alt="" class="product-center-bgimg">
+       <topImg :src='require("../assets/img/swiper6.png")'></topImg>
        <!-- 公司理念 -->
     <div class="section-title">
         <div>Corporate philosophy</div>
@@ -12,15 +12,15 @@
 </template>
 
 <script>
+import topImg from '@/components/topImg.vue'
 export default {
-
+  components: {
+    topImg
+  }
 }
 </script>
 
 <style scoped>
-.product-center-bgimg{
-  width: 100%;
-}
 img{
     width: 100%;
 }

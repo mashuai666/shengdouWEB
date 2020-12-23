@@ -6,6 +6,10 @@ import technology from '../views/technology.vue'
 import idea from '../views/idea.vue'
 import experience from '../views/experience.vue'
 import error from '../views/error.vue'
+import pipe from '../views/pipe.vue'
+import water from '../views/water.vue'
+import gas from '../views/gas.vue'
+import firecontrol from '../views/firecontrol.vue'
 
 Vue.use(VueRouter)
 
@@ -40,6 +44,26 @@ const router = new VueRouter({
       path: '/experience',
       name: 'experience',
       component: experience
+    },
+    {
+      path: '/pipe',
+      name: 'pipe',
+      component: pipe
+    },
+    {
+      path: '/water',
+      name: 'water',
+      component: water
+    },
+    {
+      path: '/gas',
+      name: 'gas',
+      component: gas
+    },
+    {
+      path: '/firecontrol',
+      name: 'firecontrol',
+      component: firecontrol
     },
     {
       path: '*',

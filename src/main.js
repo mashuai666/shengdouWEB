@@ -6,6 +6,7 @@ import App from './App.vue'
 import router from './router'
 import ElementUI from 'element-ui'
 import VueLazyload from 'vue-lazyload'
+import store from './module/vuex.js'
 
 Vue.use(ElementUI)
 Vue.use(VueLazyload)
@@ -13,5 +14,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
