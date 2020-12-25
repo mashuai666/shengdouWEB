@@ -30,9 +30,9 @@
         <div class="bottom-left">
           <h3>Our contact way</h3>
           <h4>我们的联系方式</h4>
-          <p>联系QQ：***********</p>
-          <p>联系邮箱：*****@***.com</p>
-          <p>联系电话：******* ******</p>
+          <p>联系QQ：462081537</p>
+          <p>联系邮箱：462081537@qq.com</p>
+          <p>联系电话：13720755705</p>
           <p>联系地址：西安市碑林区太白立交西北角瑞鑫摩天城2栋4单元8层</p>
           <div class="ercode">
             <img src="./assets/img/ercodea.png" alt="">
@@ -114,7 +114,7 @@ export default {
       window.scrollTo(0, 0)
     })
     this.path = this.$route.path
-    console.log(this.$route.path)
+    // console.log(this.$route.path)
   },
   watch: {
     $route (to, from) {

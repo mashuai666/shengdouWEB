@@ -8,52 +8,52 @@
     </div>
     <div class="product-server main">
       <!-- 左边tab栏 -->
-      <producSolidTab></producSolidTab>
+      <producSolidTab class="right_l_scroll"></producSolidTab>
       <!-- 右边内容区域 -->
       <div class="product-right-content">
         <!-- 智慧管网 -->
-        <div class="list">
+        <div class="list right_l_scroll">
           <div class="list-tit"><span>智慧管网</span>/PRODUCT</div>
           <div class="list-con">
-             <productList :title='this.$store.getters.getproductlist.proSD1901.name' :detail='this.$store.getters.getproductlist.proSD1901.cardDetail' :img='this.$store.getters.getproductlist.proSD1901.cardImg'></productList>
-             <productList :title='this.$store.getters.getproductlist.proSD2001A.name' :detail='this.$store.getters.getproductlist.proSD2001A.cardDetail' :img='this.$store.getters.getproductlist.proSD2001A.cardImg'></productList>
-             <productList :title='this.$store.getters.getproductlist.proSD2001B.name' :detail='this.$store.getters.getproductlist.proSD2001B.cardDetail' :img='this.$store.getters.getproductlist.proSD2001B.cardImg'></productList>
-             <productList :title='this.$store.getters.getproductlist.proSD1801.name' :detail='this.$store.getters.getproductlist.proSD1801.cardDetail' :img='this.$store.getters.getproductlist.proSD1801.cardImg'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD1901.name' :detail='this.$store.getters.getproductlist.proSD1901.cardDetail' :img='this.$store.getters.getproductlist.proSD1901.cardImg' :num='this.$store.getters.getproductlist.proSD1901.id'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD2001A.name' :detail='this.$store.getters.getproductlist.proSD2001A.cardDetail' :img='this.$store.getters.getproductlist.proSD2001A.cardImg' :num='this.$store.getters.getproductlist.proSD2001A.id'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD2001B.name' :detail='this.$store.getters.getproductlist.proSD2001B.cardDetail' :img='this.$store.getters.getproductlist.proSD2001B.cardImg' :num='this.$store.getters.getproductlist.proSD2001B.id'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD1801.name' :detail='this.$store.getters.getproductlist.proSD1801.cardDetail' :img='this.$store.getters.getproductlist.proSD1801.cardImg' :num='this.$store.getters.getproductlist.proSD1801.id'></productList>
              <!-- <div class="none"></div> -->
           </div>
-        <div class="more">查看更多</div>
+        <div class="more" title="查看更多产品" alt="查看更多产品"><router-link to="/pipe">>>></router-link></div>
         </div>
          <!-- 智慧消防 -->
-        <div class="list">
+        <div class="list right_l_scroll">
           <div class="list-tit"><span>智慧消防</span>/PRODUCT</div>
           <div class="list-con">
-             <productList :title='this.$store.getters.getproductlist.proSD20TSM01H.name' :detail='this.$store.getters.getproductlist.proSD20TSM01H.cardDetail' :img='this.$store.getters.getproductlist.proSD20TSM01H.cardImg'></productList>
-             <productList :title='this.$store.getters.getproductlist.proSD1902.name' :detail='this.$store.getters.getproductlist.proSD1902.cardDetail' :img='this.$store.getters.getproductlist.proSD1902.cardImg'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD20TSM01H.name' :detail='this.$store.getters.getproductlist.proSD20TSM01H.cardDetail' :img='this.$store.getters.getproductlist.proSD20TSM01H.cardImg' :num='this.$store.getters.getproductlist.proSD20TSM01H.id'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD1902.name' :detail='this.$store.getters.getproductlist.proSD1902.cardDetail' :img='this.$store.getters.getproductlist.proSD1902.cardImg' :num='this.$store.getters.getproductlist.proSD1902.id'></productList>
              <!-- <div class="none"></div> -->
           </div>
-        <div class="more">查看更多</div>
+        <div class="more" title="查看更多产品" alt="查看更多产品"><router-link to="/firecontrol">>>></router-link></div>
         </div>
          <!-- 智慧水务 -->
-        <div class="list">
+        <div class="list right_l_scroll">
           <div class="list-tit"><span>智慧水务</span>/PRODUCT</div>
           <div class="list-con">
-             <productList :title='this.$store.getters.getproductlist.proSD1801.name' :detail='this.$store.getters.getproductlist.proSD1801.cardDetail' :img='this.$store.getters.getproductlist.proSD1801.cardImg'></productList>
-             <productList :title='this.$store.getters.getproductlist.proSD20TSM01H.name' :detail='this.$store.getters.getproductlist.proSD20TSM01H.cardDetail' :img='this.$store.getters.getproductlist.proSD20TSM01H.cardImg'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD1801.name' :detail='this.$store.getters.getproductlist.proSD1801.cardDetail' :img='this.$store.getters.getproductlist.proSD1801.cardImg' :num='this.$store.getters.getproductlist.proSD1801.id'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD20TSM01H.name' :detail='this.$store.getters.getproductlist.proSD20TSM01H.cardDetail' :img='this.$store.getters.getproductlist.proSD20TSM01H.cardImg' :num='this.$store.getters.getproductlist.proSD20TSM01H.id'></productList>
              <!-- <div class="none"></div> -->
           </div>
-        <div class="more">查看更多</div>
+        <div class="more" title="查看更多产品" alt="查看更多产品"><router-link to="/water">>>></router-link></div>
         </div>
          <!-- 智慧气田 -->
-        <div class="list">
+        <div class="list right_l_scroll">
           <div class="list-tit"><span>智慧气田</span>/PRODUCT</div>
           <div class="list-con">
-             <productList :title='this.$store.getters.getproductlist.proSD1903.name' :detail='this.$store.getters.getproductlist.proSD1903.cardDetail' :img='this.$store.getters.getproductlist.proSD1903.cardImg'></productList>
-             <productList :title='this.$store.getters.getproductlist.proSD1800.name' :detail='this.$store.getters.getproductlist.proSD1800.cardDetail' :img='this.$store.getters.getproductlist.proSD1800.cardImg'></productList>
-             <productList :title='this.$store.getters.getproductlist.proSD1801.name' :detail='this.$store.getters.getproductlist.proSD1801.cardDetail' :img='this.$store.getters.getproductlist.proSD1801.cardImg'></productList>
-             <productList :title='this.$store.getters.getproductlist.proSD1902B.name' :detail='this.$store.getters.getproductlist.proSD1902B.cardDetail' :img='this.$store.getters.getproductlist.proSD1902B.cardImg'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD1903.name' :detail='this.$store.getters.getproductlist.proSD1903.cardDetail' :img='this.$store.getters.getproductlist.proSD1903.cardImg' :num='this.$store.getters.getproductlist.proSD1903.id'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD1800.name' :detail='this.$store.getters.getproductlist.proSD1800.cardDetail' :img='this.$store.getters.getproductlist.proSD1800.cardImg' :num='this.$store.getters.getproductlist.proSD1800.id'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD1801.name' :detail='this.$store.getters.getproductlist.proSD1801.cardDetail' :img='this.$store.getters.getproductlist.proSD1801.cardImg' :num='this.$store.getters.getproductlist.proSD1801.id'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD1902B.name' :detail='this.$store.getters.getproductlist.proSD1902B.cardDetail' :img='this.$store.getters.getproductlist.proSD1902B.cardImg' :num='this.$store.getters.getproductlist.proSD1902B.id'></productList>
              <!-- <div class="none"></div> -->
           </div>
-        <div class="more">查看更多</div>
+        <div class="more" title="查看更多产品" alt="查看更多产品"><router-link to="/gas">>>></router-link></div>
         </div>
       </div>
     </div>
@@ -75,7 +75,7 @@ export default {
     topImg
   },
   mounted () {
-    console.log(this.$store.getters.getproductlist)
+    // console.log(this.$store.getters.getproductlist)
   }
 }
 </script>
@@ -144,8 +144,28 @@ export default {
   left: 50%;
   margin-left: -50px;
   width: 100px;
-  background-color: #fff;
   text-align: center;
+}
+
+.more:hover{
+  animation:mo 1.5s linear infinite;
+}
+@keyframes mo{
+  0%,100%,54%{
+    transform: translateX(0);
+  }
+  18%,36%{
+    transform: translateX(4px);
+  }
+  27%{
+    transform: translateX(1px);
+  }
+}
+.more a{
+  color: #30A4BB !important;
+  font-size: 20px;
+  letter-spacing: 5px;
+  font-weight: bold;
 }
 .none{
   width: 379px;

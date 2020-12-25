@@ -149,23 +149,23 @@ export default {
         id: 4
       }],
       product: [{
-        name: 'SD1901 不锈钢无钥匙远程开锁智能井盖',
-        detail: '根据城市通信人井（不局限于通信人井）分布特点，通过NB-IoT组网快速实现城市井盖智能实时云监测物联网系统。终端实时采集井盖工作状态数据，对非法开启、异动等异常状态及时报警。手机APP/云平台可实时报告井盖状态，施工导航，无钥匙远程开锁，自动上锁，非法开启报警等功能。',
+        name: '智慧管网',
+        detail: '利用健全的管网地理信息系统与先进的管网传感监测网络协助管网管理部门快速发现管网系统的潜在问题，精准诊断管网问题所在的结点与地点，减少管网维修与维护的人力物力成本，为管网整体系统的扩展规划与调整优化提供直观的、准确的、系统的数据信息支持',
         src: require('../assets/img/a_product.png'),
         id: 1
       }, {
-        name: 'SD2001-C 无线智能垃圾桶监测终端',
-        detail: '智慧垃圾桶解决方案城市垃圾桶物联网开箱满桶报警物联网解决方案，监测是否扣盖，垃圾高度。',
+        name: '智慧消防',
+        detail: '智慧消防是一种先进的解决方案，与传统消防相比，注重打通各系统间的信息孤岛、提升感知预警能力和应急指挥智慧能力。通过更早发现、更快处理，将火灾风险和影响降到最低。',
         src: require('../assets/img/b_product.png'),
         id: 2
       }, {
-        name: 'SD1801 无线智能物联网液位仪',
-        detail: '本系统将基于我公司SD1600污泥监测系统来研制，目前为汉中污水厂专门定制研发,测量距离0.3~5米。',
+        name: '智慧水务',
+        detail: '智慧水务通过数采仪、无线网络、水质水压表等在线监测设备实时感知城市供排水系统的运行状态，并采用可视化的方式有机整合水务管理部门与供排水设施，形成"城市水务物联网"，并可将海量水务信息进行及时分析与处理，并做出相应的处理结果辅助决策建议',
         src: require('../assets/img/c_product.png'),
         id: 3
       }, {
-        name: 'SD1903 气田远程甲醇加注控制系统',
-        detail: '该系统能够有效节约30%左右的甲醇的生产消耗；以上气田计算，一年节约1.2亿元的生产消耗',
+        name: '智慧气田',
+        detail: '该系统能够有效节约30%左右的甲醇的生产消耗；以上气田计算，一年节约1.2亿元的生产消耗，配套带有气田远程甲醇加注控制系统移动端管理软件',
         src: require('../assets/img/d_product.png'),
         id: 4
       }]
@@ -284,7 +284,6 @@ export default {
     display: flex;
     justify-content: space-between;
 }
-
 .team-members-list .team-members-img{
     width: 210px;
     height: 215px;
@@ -295,7 +294,13 @@ export default {
     font-size: 14px;
     text-align: center;
     height: 160px;
+    transition: all .5s;
 }
+.team-members-detail:hover{
+  color: #31416D;
+   margin-top: 7px;
+}
+
 .team-members-detail div:nth-child(1){
     font-size: 16px;
     font-weight: bold;

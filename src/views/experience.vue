@@ -101,21 +101,19 @@ export default {
     return {
       patent: [{
         id: 0,
-        patentlista: require('../assets/img/zhuanli.jpg'),
-        patentlistb: require('../assets/img/zhuanli.jpg'),
-        patentlistc: require('../assets/img/zhuanli.jpg'),
-        patentlistd: require('../assets/img/zhuanli.jpg')
+        patentlista: require('../assets/img/zhuanli1.jpg'),
+        patentlistb: require('../assets/img/zhuanli2.jpg'),
+        patentlistc: require('../assets/img/zhuanli3.jpg'),
+        patentlistd: require('../assets/img/zhuanli4.jpg')
       }, {
         id: 1,
-        patentlista: require('../assets/img/zhuanli.jpg'),
-        patentlistb: require('../assets/img/zhuanli.jpg'),
-        patentlistc: require('../assets/img/zhuanli.jpg'),
-        patentlistd: require('../assets/img/zhuanli.jpg')
+        patentlista: require('../assets/img/zhuanli5.jpg'),
+        patentlistb: require('../assets/img/zhuanli6.jpg'),
+        patentlistc: require('../assets/img/zhuanli7.jpg'),
+        patentlistd: require('../assets/img/zhuanli8.jpg')
       }, {
-        patentlista: require('../assets/img/zhuanli.jpg'),
-        patentlistb: require('../assets/img/zhuanli.jpg'),
-        patentlistc: require('../assets/img/zhuanli.jpg'),
-        patentlistd: require('../assets/img/zhuanli.jpg')
+        patentlista: require('../assets/img/zhuanli9.jpg'),
+        patentlistb: require('../assets/img/zhuanli10.jpg')
       }]
     }
   },

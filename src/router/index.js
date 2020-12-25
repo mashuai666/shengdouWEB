@@ -10,6 +10,7 @@ import pipe from '../views/pipe.vue'
 import water from '../views/water.vue'
 import gas from '../views/gas.vue'
 import firecontrol from '../views/firecontrol.vue'
+import productDetail from '../views/productDetail.vue'
 
 Vue.use(VueRouter)
 
@@ -64,6 +65,11 @@ const router = new VueRouter({
       path: '/firecontrol',
       name: 'firecontrol',
       component: firecontrol
+    },
+    {
+      path: '/productDetail',
+      name: 'productDetail',
+      component: productDetail
     },
     {
       path: '*',

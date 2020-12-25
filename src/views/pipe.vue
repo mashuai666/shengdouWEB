@@ -8,34 +8,36 @@
     </div>
     <div class="product-server main">
       <!-- 左边tab栏 -->
-      <producSolidTab></producSolidTab>
+      <producSolidTab class="right_l_scroll"></producSolidTab>
       <!-- 右边内容区域 -->
       <div class="product-right-content">
         <!-- 热门推荐 -->
-        <div class="hot">
+        <div class="hot right_l_scroll">
           <div class="list-tit" style="width:235px"><span>热门推荐</span>/HOT RECOMMEND</div>
-          <div class="hot-con">
-            <div class="hot-con-img">
-              <img :src='this.$store.getters.getproductlist.proSD1901.cardImg' alt="">
+          <router-link to="/productDetail?productId=SD1901" title="点击查看产品详情" alt="点击查看产品详情">
+            <div class="hot-con">
+              <div class="hot-con-img">
+                <img v-lazy='this.$store.getters.getproductlist.proSD1901.cardImg' alt="">
+              </div>
+              <div class="hot-right-con">
+                <div>{{this.$store.getters.getproductlist.proSD1901.name}}</div>
+                <div>{{this.$store.getters.getproductlist.proSD1901.cardDetail}}</div>
+                <div>咨询热线 13720755705</div>
+              </div>
             </div>
-            <div class="hot-right-con">
-              <div>{{this.$store.getters.getproductlist.proSD1901.name}}</div>
-              <div>{{this.$store.getters.getproductlist.proSD1901.cardDetail}}</div>
-              <div>咨询热线 1**********</div>
-            </div>
-          </div>
+          </router-link>
         </div>
         <!-- 智慧管网 -->
-        <div class="list">
+        <div class="list right_l_scroll">
           <div class="list-tit"><span>智慧管网</span>/PRODUCT</div>
           <div class="list-con">
-             <productList :title='this.$store.getters.getproductlist.proSD1901.name' :detail='this.$store.getters.getproductlist.proSD1901.cardDetail' :img='this.$store.getters.getproductlist.proSD1901.cardImg'></productList>
-             <productList :title='this.$store.getters.getproductlist.proSD2001A.name' :detail='this.$store.getters.getproductlist.proSD2001A.cardDetail' :img='this.$store.getters.getproductlist.proSD2001A.cardImg'></productList>
-             <productList :title='this.$store.getters.getproductlist.proSD2001B.name' :detail='this.$store.getters.getproductlist.proSD2001B.cardDetail' :img='this.$store.getters.getproductlist.proSD2001B.cardImg'></productList>
-             <productList :title='this.$store.getters.getproductlist.proSD1801.name' :detail='this.$store.getters.getproductlist.proSD1801.cardDetail' :img='this.$store.getters.getproductlist.proSD1801.cardImg'></productList>
-             <productList :title='this.$store.getters.getproductlist.proSD2001D.name' :detail='this.$store.getters.getproductlist.proSD2001D.cardDetail' :img='this.$store.getters.getproductlist.proSD2001D.cardImg'></productList>
-             <productList :title='this.$store.getters.getproductlist.proSD2001C.name' :detail='this.$store.getters.getproductlist.proSD2001C.cardDetail' :img='this.$store.getters.getproductlist.proSD2001C.cardImg'></productList>
-             <productList :title='this.$store.getters.getproductlist.proSD1902.name' :detail='this.$store.getters.getproductlist.proSD1902.cardDetail' :img='this.$store.getters.getproductlist.proSD1902.cardImg'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD1901.name' :detail='this.$store.getters.getproductlist.proSD1901.cardDetail' :img='this.$store.getters.getproductlist.proSD1901.cardImg' :num='this.$store.getters.getproductlist.proSD1901.id'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD2001A.name' :detail='this.$store.getters.getproductlist.proSD2001A.cardDetail' :img='this.$store.getters.getproductlist.proSD2001A.cardImg' :num='this.$store.getters.getproductlist.proSD2001A.id'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD2001B.name' :detail='this.$store.getters.getproductlist.proSD2001B.cardDetail' :img='this.$store.getters.getproductlist.proSD2001B.cardImg' :num='this.$store.getters.getproductlist.proSD2001B.id'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD1801.name' :detail='this.$store.getters.getproductlist.proSD1801.cardDetail' :img='this.$store.getters.getproductlist.proSD1801.cardImg' :num='this.$store.getters.getproductlist.proSD1801.id'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD2001D.name' :detail='this.$store.getters.getproductlist.proSD2001D.cardDetail' :img='this.$store.getters.getproductlist.proSD2001D.cardImg' :num='this.$store.getters.getproductlist.proSD2001D.id'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD2001C.name' :detail='this.$store.getters.getproductlist.proSD2001C.cardDetail' :img='this.$store.getters.getproductlist.proSD2001C.cardImg' :num='this.$store.getters.getproductlist.proSD2001C.id'></productList>
+             <productList :title='this.$store.getters.getproductlist.proSD1902.name' :detail='this.$store.getters.getproductlist.proSD1902.cardDetail' :img='this.$store.getters.getproductlist.proSD1902.cardImg' :num='this.$store.getters.getproductlist.proSD1902.id'></productList>
              <div class="none"></div>
           </div>
         </div>
@@ -59,7 +61,6 @@ export default {
     topImg
   },
   mounted () {
-    console.log(this.$store.getters.getproductlist)
   }
 }
 </script>
@@ -80,7 +81,9 @@ export default {
   display: flex;
   justify-content: space-between;
   border: 1px solid #ececec;
+  color: #000;
 }
+
 .hot-con-img{
   width: 400px;
   height: 300px;
@@ -110,7 +113,8 @@ export default {
 .hot-right-con div:nth-child(2){
   margin-top: 10px;
   background-color: #fff;
-  font-size: 14px;
+  font-size: 15px;
+  letter-spacing: 1px;
   text-indent: 2em;
   padding: 10px;
   height: 187px;
